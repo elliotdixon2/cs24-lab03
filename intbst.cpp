@@ -57,6 +57,7 @@ bool IntBST::insert(int value, Node *n) {
 
 // print tree data pre-order
 void IntBST::printPreOrder() const {
+    if(!root) return;
     cout << "pre-order: ";
     printPreOrder(root);
     cout << endl;
@@ -72,6 +73,7 @@ void IntBST::printPreOrder(Node *n) const {
 
 // print tree data in-order, with helper
 void IntBST::printInOrder() const {
+    if(!root) return;
     cout << "in-order: ";
     printInOrder(root);
     cout << endl;
@@ -85,6 +87,7 @@ void IntBST::printInOrder(Node *n) const {
 
 // prints tree data post-order, with helper
 void IntBST::printPostOrder() const {
+    if(!root) return;
     cout << "post-order: ";
     printPostOrder(root);
     cout << endl;
