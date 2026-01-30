@@ -59,7 +59,6 @@ bool IntBST::insert(int value, Node *n) {
 void IntBST::printPreOrder() const {
     if(!root) return;
     printPreOrder(root);
-    cout << endl;
 }
 
 // recursive helper for printPreOrder()
@@ -74,7 +73,6 @@ void IntBST::printPreOrder(Node *n) const {
 void IntBST::printInOrder() const {
     if(!root) return;
     printInOrder(root);
-    cout << endl;
 }
 void IntBST::printInOrder(Node *n) const {
     if(!n) return;
@@ -87,7 +85,6 @@ void IntBST::printInOrder(Node *n) const {
 void IntBST::printPostOrder() const {
     if(!root) return;
     printPostOrder(root);
-    cout << endl;
 }
 
 void IntBST::printPostOrder(Node *n) const {
