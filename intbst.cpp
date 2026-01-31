@@ -42,6 +42,7 @@ bool IntBST::insert(int value, Node *n) {
         if(!n->right){
             Node* inserted = new Node(value);
             n->right = inserted;
+            inserted->parent = n;
             return true;
         }
         return insert(value,n->right);
@@ -49,6 +50,7 @@ bool IntBST::insert(int value, Node *n) {
         if(!n->left){
             Node* inserted = new Node(value);
             n->left = inserted;
+            inserted->parent = n;
             return true;
         }
         return insert(value,n->left);
