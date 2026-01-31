@@ -153,13 +153,12 @@ IntBST::Node* IntBST::getPredecessorNode(int value) const{
         }
         return valLocation;
     }
-    while(valLocation && valLocation->parent){
-        if(valLocation == valLocation->parent->right){
-            return valLocation->parent;
-        }
-        valLocation = valLocation->parent;
+    Node* parent = valLocation->parent;
+    while(parent && valLocation == parent->left){
+        valLocation = parent;
+        parent = parent->parent;
     }
-    return nullptr;
+    return parent;
 }
 
 // returns the predecessor value of the given value or 0 if there is none
@@ -182,13 +181,12 @@ IntBST::Node* IntBST::getSuccessorNode(int value) const{
         }
         return valLocation;
     }
-    while(valLocation && valLocation->parent){
-        if(valLocation == valLocation->parent->left){
-            return valLocation->parent;
-        }
-        valLocation = valLocation->parent;
+    Node* parent = valLocation->parent;
+    while(parent && valLocation == parent->right){
+        valLocation = parent;
+        parent = parent->parent;
     }
-    return nullptr;
+    return parent;
 }
 
 // returns the successor value of the given value or 0 if there is none
