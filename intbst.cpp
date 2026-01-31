@@ -203,7 +203,6 @@ int IntBST::getSuccessor(int value) const{
 // deletes the Node containing the given value from the tree
 // returns true if the node exist and was deleted or false if the node does not exist
 bool IntBST::remove(int value){
-    return false;
     Node* node = getNodeFor(value,root);
     if(!node) return false;
     if(!node->left && !node->right){
